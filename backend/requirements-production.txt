@@ -1,50 +1,25 @@
-# Django 5.2.6
-Django==5.2.6
-djangorestframework==3.16.1
-djangorestframework-simplejwt==5.5.1
-django-cors-headers==4.8.0
-channels==4.3.1
-drf-spectacular==0.28.0
+# Production requirements (compatibility alias)
+# This file keeps the same production setup as requirements_prod.txt.
 
-# Core dependencies
-python-dotenv==1.1.1
-sqlparse==0.5.5
+-r requirements.txt
 
-# Testing
-pytest==8.4.2
-pytest-django==4.11.1
-pytest-asyncio==0.21.1
+# Production server / deployment
+gunicorn==21.2.0
+whitenoise==6.6.0
+uvicorn==0.25.0
 
-# AI/ML Stack - PRODUCTION STABLE VERSIONS
-torch==2.1.2
-torchvision==0.16.2
-torchaudio==2.1.2
-transformers==4.35.2
-sentence-transformers==2.2.2
+# Redis / background jobs
+redis==5.0.1
+celery==5.4.0
+django-celery-beat==2.5.0
+channels-redis==4.1.0
+django-redis==5.4.0
 
-# ML utilities
-numpy==1.26.4
-scipy==1.11.4
-scikit-learn==1.3.2
+# ASGI / websocket support
+daphne==4.1.1
 
-# Vector database
-chromadb==0.4.21
-onnxruntime==1.23.2
-
-# Supporting libraries
-huggingface-hub==0.16.4
-safetensors==0.7.0
-tokenizers==0.15.2
-sentencepiece==0.2.1
-
-# Data processing
-pandas==2.0.3
-pillow==12.2.0
-
-# Async/Real-time
-uvicorn==0.24.0
-starlette==0.27.0
-
-# Observability (Optional but recommended for production)
-# opentelemetry-api==1.42.1
-# opentelemetry-sdk==1.42.1
+# Monitoring and security
+sentry-sdk==1.41.0
+cryptography==41.0.7
+pycryptodome==3.19.0
+pyotp==2.9.0
